@@ -1,14 +1,18 @@
 # Markdown 文件批量转换为 pdf
 
-![](http://oejqwrqkh.bkt.clouddn.com/2018-09-11-17-03-56-626323.jpeg)
+![](http://upload-images.jianshu.io/upload_images/64542-0b973e79fbb742d0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 需求
 
 有个朋友提出，希望把目录中的许多 markdown 文件，批量转换为对应名称的 pdf 格式文件。我于是编写了一个 Python 脚本，并且分享给你。如果你有类似的需求，欢迎使用。
 
+由于使用了 pandoc 作为转换工具，因此 Markdown 文件里的图片链接，不论是本地存储的（只测试了绝对路径情况），还是图床上的，都可以正确转换并且显示到 pdf 文件里。
+
 # 环境
 
 因为提出需求的朋友，使用的是 macOS 系统，因此这里我们以 macOS 系统的安装方式为准。注意下述工具实际上都是**跨平台**的。因此如果你使用的是 Windows 或者 Linux ，理论上也都是可以使用的。
+
+这个脚本在 macOS 下测试通过，欢迎你把其他平台测试的结果告诉我。
 
 ## python 3
 
@@ -47,7 +51,7 @@ tlmgr install unicode-math filehook xecjk xltxtra realscripts fancyhdr lastpage 
 
 压缩包里面，有两个文件。
 
-其中的`batch-markdown-to-pdf.py`是运行脚本，`template.tex`是转换是采用的模板。
+其中的`batch-markdown-to-pdf.py`是运行脚本，`template.tex`是转换是采用的模板，这个模板并非我做的，它来自于[这个](https://github.com/chengjun90/markdown2pdf) github 项目。
 
 如果你对 latex 有研究，可以自行修改 `template.tex` 的内容，以控制输出 pdf 的样式。
 
@@ -87,7 +91,7 @@ python batch-markdown-to-pdf.py
 
 你的转换后 pdf 文件，应该已经在里面了。
 
-![](http://oejqwrqkh.bkt.clouddn.com/2018-09-11-17-07-53-935163.jpeg)
+![](http://upload-images.jianshu.io/upload_images/64542-71350d6a815b4dd5.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 如果遇到问题，欢迎反馈给我。
 

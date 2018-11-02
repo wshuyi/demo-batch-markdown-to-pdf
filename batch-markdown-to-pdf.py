@@ -1,10 +1,7 @@
-work_dir_str = "~/Downloads/测试目录/"
-
 from pathlib import Path
 import os
 
-work_dir = Path(work_dir_str)
-work_dir = work_dir.expanduser()
+work_dir = Path.cwd()
 
 export_pdf_dir = work_dir / 'pdf'
 if not export_pdf_dir.exists():
